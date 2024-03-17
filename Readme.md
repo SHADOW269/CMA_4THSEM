@@ -3,7 +3,7 @@
 
 
 1. Create a home page for a college website containg all latest HTML5 tags like article,
-aside, nav, header, footer, section, figure. And in nav. Create hyper
+aside, nav, header, footer, section, figure. And in nav Create hyper
 links for courses, facilities and contact details. On clicking
 * Course hyperlink, display the page with course names offered in the college
 using ordered list,
