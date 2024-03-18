@@ -30,3 +30,8 @@ proper input.
 ‘Toggle Face’ button display should toggle between smiling face and sad face.
 Note: Use only one button. And faces should be drawn using canvas element. Faces
 must be exactly like the following screen shots.
+---
+4. Create a web page to model solar system using canvas element animation, where it 
+contains sun, earth and moon (all must be created using canvas shapes not images). 
+Earth should revolve around sun and moon should revolve around earth 
+simultaneously. Sample screen shot below:
