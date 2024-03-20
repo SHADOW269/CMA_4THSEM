@@ -35,3 +35,12 @@ must be exactly like the following screen shots.
 contains sun, earth and moon (all must be created using canvas shapes not images). 
 Earth should revolve around sun and moon should revolve around earth 
 simultaneously. Sample screen shot below:
+---
+5. Create a web page containing simple calculator which should have basic arithmetic
+(+,-,*,/ ) operation on two floating point numbers and show result.
+Validations to be followed:
+• . (Decimal point) should be taken only once for an operand.
+• Operand can be negative.
+• Division by zero must be shown proper error message in result.
+Sample screen shot:
+---
