@@ -44,3 +44,5 @@ Validations to be followed:
 * Division by zero must be shown proper error message in result.
 Sample screen shot:
 ---
+8. Create a web page using HTML and CSS to create a timetable as follows:
+---
