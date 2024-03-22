@@ -36,7 +36,14 @@ contains sun, earth and moon (all must be created using canvas shapes not images
 Earth should revolve around sun and moon should revolve around earth 
 simultaneously. Sample screen shot below:
 ---
-5. Create a web page containing simple calculator which should have basic arithmetic
+## PART - B
+
+1. Create a web page using HTML5 canvas element to show a clock which changes
+time for every second, minute and hours (as that of an analog clock). Clock should
+have second, minute and hour needles and minute marking must be there (as shown
+in screen shot):
+---
+2. Create a web page containing simple calculator which should have basic arithmetic
 (+,-,*,/ ) operation on two floating point numbers and show result.
 Validations to be followed:
 * (Decimal point) should be taken only once for an operand.
