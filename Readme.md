@@ -31,10 +31,15 @@ proper input.
 Note: Use only one button. And faces should be drawn using canvas element. Faces
 must be exactly like the following screen shots.
 ---
-4. Create a web page to model solar system using canvas element animation, where it 
+4. Design a mock login page and style it using CSS3. Initially login page should look
+like the following screen shot and while mouse is hovered on SUBMIT button it should look like
+---
+5. Create a web page to model solar system using canvas element animation, where it 
 contains sun, earth and moon (all must be created using canvas shapes not images). 
 Earth should revolve around sun and moon should revolve around earth 
 simultaneously. Sample screen shot below:
+---
+8. Create a web page using HTML and CSS to create a timetable as follows:
 ---
 ## PART - B
 
@@ -50,6 +55,4 @@ Validations to be followed:
 * Operand can be negative.
 * Division by zero must be shown proper error message in result.
 Sample screen shot:
----
-8. Create a web page using HTML and CSS to create a timetable as follows:
 ---
