@@ -56,3 +56,10 @@ Validations to be followed:
 * Division by zero must be shown proper error message in result.
 Sample screen shot:
 ---
+3. Create a HTML page make a quiz game where user should answer one question at a
+time, answers must be shown in radio buttons. Without submitting the answer, quiz
+should not move to next question (Minimum five questions must be there). When
+user wishes to get score (using score button) score should be displayed in alert
+message. All the question must be loaded in same page (no page navigation is
+allowed) Sample screen shot:
+---
