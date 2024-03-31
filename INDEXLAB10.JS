@@ -1,3 +1,4 @@
+//helps to display the value
 let display = document.getElementById('display');
 
 function appendToDisplay(value) {
