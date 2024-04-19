@@ -76,10 +76,10 @@ animation and transition. (Java script should not be used to animate.)
 5. Create a web page using HTML5/CSS3 to animate a truck movement. While truck
 moves on mountains and trees should move in the back ground. Output screen shot:
 Background hills must be created using CSS only and for tree, truck and wheels
-download the images from the following URLs.
-https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/tree.svg
-https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/truck.svg
-https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/wheels.svg
+download the images from the following URLs.<br>
+https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/tree.svg<br>
+https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/truck.svg<br>
+https://s3-us-west-2.amazonaws.com/s.cdpn.io/130015/wheels.svg<br>
 Animation must be implemented using ONLY CSS and Java script should not be used.
 ---
 6. Create a simple paint app which draws lines based on the selected colour (chosen
