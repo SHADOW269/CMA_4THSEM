@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="COURSES.CSS">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <table align="Rights">
+            <tr>
+                <th>
+                    <img src="HTML IMAGES/MAPS NAME AND LOGO.png" alt="MAPS logo">
+                </th>
+            </tr>
+        </table>
+    </header>
+    <nav class="tab">
+        <a href="https://www.mapsmangalore.com/" target="_blank" title="MAPS offical website">HOME</a>
+        <a href="Courses.HTML">COURSES</a>
+        <a href="#facilities">FACILITIES</a>
+        <a href="mailto:mapsmangalore@gmail.com">CONTACT</a>
+        <a href="LOGINPAGE.HTML">LOG IN</a>
+    </nav>
+    <h2 align="center">Courses Offered</h2>
+    <table align="center">
+        <form action="index.php" method="post">
+            <tr>
+                <td><label for="Student_Name">Student Name</label></td>
+                <td><input type="text" id="Student_Name" placeholder="Name" maxlength="25" required></td>
+            </tr>
+            <tr>
+                <td> <label for="gender">Gender</label></td>
+                <td> <label for="Male">Male</label>
+                    <input type="radio" id="Male" value="Male" name="gender">
+                    
+                    <label for="Female">Female</label>
+                    <input type="radio" id="Female" value="Female" name="gender">
+                </td>
+            </tr>
+            <tr>
+                <td> <label for="Courses">Courses</label></td>
+                <td> <select id="Courses">
+                        <option disabled>Select Courses</option>
+                        <option>B.COM</option>
+                        <option>BCA</option>
+                        <option>BSE</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><label for="bday">Birth Date</label></td>
+                <td><input type="date" id="bday"></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email</label></td>
+                <td><input type="email" id="email" placeholder="example@gmail.com"></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone Number: +91 </td>
+                <td><input type="tel" id="phone" placeholder="0123456789" pattern="[0-9]{10}"></td>
+            </tr>
+            <tr>
+                <td><label for="Password">Password</label></td>
+                <td><input type="password" id="Password" placeholder="Password" minlength="8" required></td>
+            </tr>
+            <tr>
+                <td align="right"><input type="submit"></td>
+                <td><input type="reset"></td>
+            </tr>
+
+        </form>
+    </table>
+    <a href="https://www.mapsmangalore.com/admission.php">
+        <button>Application</button>
+    </a>
+    <footer>
+        <p>&copy; 2024 Maps College. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
