@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SVG Lion</title>
+</head>
+<body>
+  <svg height="800" width="960" xmlns="http://www.w3.org/2000/svg">
+     <path d="M 150 80 Q 235 30 290 80" stroke="black" fill="orange" />  
+    <g id="fur">
+   <path d="M 120 100 Q 100 70 150 80" stroke="black" fill="orange"/>
+      <path d="M 120 100 Q 60 150 120 150" stroke="black" fill="orange" />
+      <path d="M 120 150 Q 60 200 120 200" stroke="black" fill="orange" />
+      <path d="M 120 200 
+               Q 60 270 120 270
+               Q 140 320 180 300
+               Q 160 340 220 335
+               " stroke="black" fill="orange" />
+    </g>
+    <use xlink:href="#fur" transform="translate(440,0) scale(-1,1)" />
+    <rect x="120" y="80" width="200" height="150" fill="orange"></rect>
+    <polygon points="130,230 220,335 300,230" fill="orange" />
+    <g id="ear">
+      <ellipse cx="163" cy="120" rx="22" ry="25" stroke="black" fill="yellow" transform="rotate(-35,163,120)" />
+      <circle cx="165" cy="123" r="15" stroke="black" fill="hotpink" />
+    </g>
+
+    <use xlink:href="#ear" transform="translate(440,0) scale(-1,1)" />
+    <g id="face">
+     <path d="M 165 135 Q 90 245 190 275" stroke="black" fill="yellow" />
+    </g> 
+
+    <use xlink:href="#face" transform="translate(440,0) scale(-1,1)" />
+    <polygon points="165,135 275, 135 250,275 190,275" fill="yellow" />
+    <path d="M 165 135 Q 235 70 275 135" stroke="black" fill="yellow" />
+    <path d="M 190 275 Q 225 290 250 275" stroke="black" fill="yellow" />
+
+    <g id="eye">
+      <path d="M 178 148 Q 190 130 203 148" stroke="black" fill="transparent" />
+      <ellipse cx="192" cy="167" rx="9" ry="13" stroke="black" fill="white" />
+      <ellipse cx="192" cy="170" rx="8" ry="10" />
+    </g>
+
+    <use xlink:href="#eye" transform="translate(50,0)" />
+    <ellipse cx="217" cy="227" rx="10" ry="15" fill="black" />
+    <circle cx="195" cy="220" r="22" fill="hotpink" />
+    <circle cx="240" cy="220" r="22" fill="hotpink" />
+    <ellipse cx="217" cy="200" rx="20" ry="13" fill="black" />  
+</svg>
+</body>
+</html>
