@@ -1,0 +1,43 @@
+html,
+body {
+	height: 100%;
+	width: 100%
+}
+
+body {
+	min-height: 100%;
+	background: linear-gradient(to bottom, #0a1a27, #4e83b7);
+	position: relative;
+}
+
+body #mountains {
+	z-index: 2;
+	position: absolute;
+	bottom: 20%;
+	margin-bottom: -16px;
+	left: 10%;
+}
+
+body #ground {
+	z-index: 1;
+	width: 100%;
+	height: 20%;
+	position: absolute;
+	bottom: 0;
+	background: #879759;
+	background: linear-gradient(to bottom, #879759, #648459);
+}
+
+body #hills {
+	position: absolute;
+	left: 10%;
+	margin-left: -120px;
+	margin-bottom: -86px;
+	bottom: 20%;
+	z-index: 3;
+}
+
+body #stars {
+	width: 100%;
+	height: 100%;
+}

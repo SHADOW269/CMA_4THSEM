@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Paint App</title>
+    <style>
+        canvas {
+            border: 2px solid black;
+        }
+
+        div {
+            width: 500px;
+            background-color: black;
+            color: white;
+            padding-left: 5px;
+        }
+
+        h1 {
+            color: rgb(3, 93, 93);
+        }
+
+        input {
+            margin: 5px;
+        }
+
+        button {
+            background-color: #388ae7;
+            color: white;
+            padding: 5px 15px;
+            font-size: 16px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple Paint App</h1>
+    <div>
+        <label for="colorInput">Choose color:</label>
+        <input type="color" id="colorInput" onchange="colorchange()"><br>
+        <label for="thicknessInput">Choose thickness:</label>
+        <input type="number" id="thicknessInput" onchange="thickness()" min="1" max="50" value="1"><br>
+        <button id="clearButton" onclick="ClearCanvas()">Clear</button>
+    </div>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var colorInput = document.getElementById("colorInput");
+        var thicknessInput = document.getElementById("thicknessInput");
+        // Set the initial drawing style
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 1;
+        // Function to draw a line from (x1, y1) to (x2, y2)
+        function drawLine(x1, y1, x2, y2) {
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+            ctx.stroke();
+        }
+        function colorchange() {
+            ctx.strokeStyle = colorInput.value;
+        }
+        function thickness() {
+            ctx.lineWidth = thicknessInput.value;
+        }
+        function ClearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+        // Variables to store the starting and ending points of each line
+        var isDrawing = false;
+        var startX, startY, endX, endY;
+        // Event listeners for the canvas mouse events
+        canvas.addEventListener("mousedown", function (e) {
+            isDrawing = true;
+            startX = e.clientX - canvas.offsetLeft;
+            startY = e.clientY - canvas.offsetTop;
+        });
+        canvas.addEventListener("mousemove", function (e) {
+            if (isDrawing) {
+                endX = e.clientX - canvas.offsetLeft;
+                endY = e.clientY - canvas.offsetTop;
+                drawLine(startX, startY, endX, endY);
+                startX = endX;
+                startY = endY;
+            }
+        });
+        canvas.addEventListener("mouseup", function (e) {
+            isDrawing = false;
+        });
+    </script>
+</body>
+
+</html>

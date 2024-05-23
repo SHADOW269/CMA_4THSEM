@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Toggle Face</title>
+    <style>
+        #canvas-container {
+            border: 2px solid black;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            background-color: blue;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="canvas-container">
+        <canvas id="faceCanvas" width="150" height="150"></canvas>
+    </div>
+    <button onclick="toggleFace()">Toggle Face</button>
+    <script>
+        var canvas = document.getElementById("faceCanvas");
+        var ctx = canvas.getContext("2d");
+        var isSmiling = true;
+
+        //Function to draw a smiling face
+        function drawSmile() {
+            // draw circle
+            ctx.clearRect(0, 1, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.arc(75, 75, 70, 0, Math.PI * 2);
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+
+            //draw eyes
+
+            ctx.beginPath();
+            ctx.moveTo(35, 55);
+            ctx.quadraticCurveTo(50, 30, 65, 55);
+            ctx.strokeStyle = "#000";
+            ctx.lineWidth = 4;
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(90, 55);
+            ctx.quadraticCurveTo(105, 30, 120, 55);
+            ctx.strokeStyle = "#000";
+            ctx.lineWidth = 4;
+            ctx.stroke();
+
+            // draw Nose
+
+            ctx.beginPath();
+            ctx.moveTo(80, 70);
+            ctx.quadraticCurveTo(60, 77, 80, 85);
+            ctx.strokeStyle = "#000";
+            ctx.lineWidth = 4;
+            ctx.stroke();
+
+            // draw Lips
+
+            ctx.beginPath();
+            ctx.moveTo(40, 100);
+            ctx.quadraticCurveTo(75, 155, 110, 100);
+            ctx.strokeStyle = "#000";
+            ctx.lineWidth = 4;
+            ctx.stroke();
+        }
+
+        // Function to draw a sad face
+        function drawSad() {
+            //draw circle
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.arc(75, 75, 70, 0, Math.PI * 2);
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+
+            //draw eyes
+
+            ctx.beginPath();
+            ctx.moveTo(35, 55);
+            ctx.quadraticCurveTo(50, 30, 65, 55);
+            ctx.strokeStyle = "#000";
+            ctx.lineWidth = 4;
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(90, 55);
+            ctx.quadraticCurveTo(105, 30, 120, 55);
+            ctx.strokeStyle = "#000";
+            ctx.lineWidth = 4;
+            ctx.stroke();
+
+            // draw Nose
+            ctx.beginPath();
+            ctx.moveTo(80, 70);
+            ctx.quadraticCurveTo(60, 77, 80, 85);
+            ctx.strokeStyle = "#000";
+            ctx.lineWidth = 4;
+            ctx.stroke();
+
+            // draw Lips
+            ctx.beginPath();
+            ctx.moveTo(40, 120);
+            ctx.quadraticCurveTo(75, 80, 110, 120);
+            ctx.strokeStyle = "#000";
+            ctx.lineWidth = 4;
+            ctx.stroke();
+        }
+
+        //Function to toggle between the smiling and sad face
+
+        function toggleFace() {
+            if (isSmiling) {
+                drawSad();
+                isSmiling = false;
+            }
+            else {
+                drawSmile();
+                isSmiling = true;
+            }
+        }
+
+        //Initial drawing of the smiling face
+        drawSmile();
+    </script>
+</body>
+
+</html>

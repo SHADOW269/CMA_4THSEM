@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System Animation</title>
+    <style>
+        canvas{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        const sun = {
+            x: canvas.width / 2,
+            y: canvas.height / 2, 
+            radius: 50,
+            color: 'yellow'
+        };
+
+        const earth = {
+            x: sun.x + 200,
+            y: sun.y,
+            radius: 20,
+            color: 'blue',
+            angle: 0,
+            speed: 0.005
+        };
+
+        const moon = {
+            x: earth.x + 50,
+            y: earth.y,
+            radius: 10,
+            color:'grey',
+            angle: 0,
+            speed: 0.05
+        };
+
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height); 
+
+            ctx.beginPath();
+            ctx.arc(sun.x, sun.y, sun.radius, 0, Math.PI * 2);
+            ctx.fillStyle = sun.color;
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(earth.x, earth.y, earth.radius, 0, Math.PI * 2);
+            ctx.fillStyle = earth.color;
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.arc(moon.x, moon.y, moon.radius, 0, Math.PI * 2);
+            ctx.fillStyle = moon.color;
+            ctx.fill();
+
+            earth.x = sun.x + 200 * Math.cos(earth.angle);
+            earth.y = sun.y + 200 * Math.sin(earth.angle);
+            earth.angle += earth.speed;
+
+            moon.x = earth.x + 50 * Math.cos(moon.angle); 
+            moon.y = earth.y + 50 * Math.sin(moon.angle); 
+            moon.angle += moon.speed;
+            requestAnimationFrame(draw)
+        }
+        draw();
+    </script>
+</body>
+</html>

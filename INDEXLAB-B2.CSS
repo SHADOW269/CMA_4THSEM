@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 3;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+table {
+    border: 3px solid rgb(64, 25, 126);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(117, 113, 113);
+}
+
+input {
+    border-radius: 10px;
+}
+
+.calculator {
+    text-align: center;
+}
+
+#display {
+    width: 200px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.buttons button {
+    background-color: skyblue;
+    width: 60px;
+    height: 30px;
+    font-size: 18px;
+    margin: 5px;
+    border-radius: 8px;
+}

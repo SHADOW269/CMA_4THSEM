@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANVAS ELEMENTS</title>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <script>
+            var gco=new Array();
+            gco.push("source-atop");
+            gco.push("source-in");
+            gco.push("source-out");
+            gco.push("source-over");
+            gco.push("destination-in");
+            gco.push("destination-out");
+            gco.push("destination-over");
+            gco.push("lighter");
+            gco.push("darker");
+            gco.push("copy");
+            gco.push("xor");
+            var n;
+            document.write("<table><tr>");
+            for(n=0;n<gco.length;n++)
+            {
+                if(n%4==0)
+                {
+                    document.write("</tr><tr>");
+                }
+                document.write("<td><div id='block" + n +"'>");
+                var c=document.createElement("canvas");
+                c.width=120;
+                c.height=100;
+                document.getElementById("block"+n).appendChild(c);
+                var ctx=c.getContext("2d");
+                ctx.fillStyle="blue";
+                ctx.fillRect(10,10,50,50);
+                ctx.globalCompositeOperation=gco[n];
+                ctx.beginPath();
+                ctx.fillStyle="red";
+                ctx.arc(50,50,30,0,2*Math.PI);
+                ctx.fill();
+                document.write("<br>"+gco[n] +"</div></td>");
+            }
+            document.write("</tr></table>");
+        </script>
+        
+ 
+</body>
+</html>
