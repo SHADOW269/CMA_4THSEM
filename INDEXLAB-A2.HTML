@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,8 +84,7 @@
     <h2 style="color : #4CAF50">Registration Form</h2>
     <form>
         <label for="name">Name :</label>
-        <input type="text" id="name" name="name" placeholder="Enter
-your name" required>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
         <label for="password">Password :</label>
         <input type="password" id="password" name="password" placeholder="Enter your password" required>
         <label for="confirm_password">Confirm Password :</label>
@@ -95,23 +95,16 @@ your name" required>
         <label for="range">Skill Range :</label>
         <input type="range" id="range" name="range" min="0" max="10" required>
         <label for="email">Email :</label>
-
-        Computer Multimedia & Animation IV SEMESTER
-
-        14
-        <input type="email" id="email" name="email" placeholder="Enter
-your email" required>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
         <label for="url">Profile URL :</label>
-        <input type="url" id="url" name="url" placeholder="Enter your
-URL" required>
+        <input type="url" id="url" name="url" placeholder="Enter your URL" required>
         <label for="file">Resume :</label>
         <input type="file" id="file" name="file" required>
         <input type="submit" value="Submit">
         <input type="reset" value="Reset">
         <script>
             const passwordInput = document.getElementById('password');
-            const confirmPasswordInput =
-                document.getElementById('confirm_password');
+            const confirmPasswordInput = document.getElementById('confirm_password');
             confirmPasswordInput.addEventListener('input', function () {
                 if (confirmPasswordInput.value !== passwordInput.value) {
                     confirmPasswordInput.setCustomValidity('Passwords do notmatch');
