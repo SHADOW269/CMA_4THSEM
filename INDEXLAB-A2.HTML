@@ -1,23 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Citizen Registration</title>
+    <title>HTML5 Form</title>
     <style>
-        h1 {
-            background-color: rgb(20, 143, 255);
-            color: azure
+        h2 {
+            text-align: center;
         }
-
-        table,
-        th,
-        td {
-            border: 1px solid white;
-            padding: 10px;
-        }
-
 
         form {
             width: 500px;
@@ -31,18 +21,18 @@
 
         label {
             font-weight: bold;
-            font-size: 15px;
+            font-size: 16px;
         }
 
-        input[type="Text"],
-        input[type="Text"],
-        input[type="password"],
+        input[type="text"],
         input[type="password"],
         input[type="tel"],
         input[type="email"],
-        input[type="Textarea"],
+        input[type="url"],
+        input[type="file"],
+        input[type="submit"],
         input[type="reset"],
-        input[type="submit"] {
+        input[type="range"] {
             width: 95%;
             padding: 5px;
             margin-bottom: 10px;
@@ -65,75 +55,71 @@
             cursor: pointer;
         }
 
-        input[type="submit"]:hover,
-        input[type="reset"]:hover {
-            background-color: #0ef31a;
+        input[type="submit"] :hover,
+        input[type="reset"] :hover {
+            background-color: #45a049;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            background: white;
+            height: 2px;
+            outline: none;
+        }
+
+        input[type="range"] ::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 20px;
+            background: #4CAF50;
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
-    <h1>
-        <center>Citizen Registration</center>
-    </h1>
-    <br>
+    <h2 style="color : #4CAF50">Registration Form</h2>
     <form>
-        <table align="CENTER">
-            <tr>
-                <td><label>User Type:</label></td>
-                <td><select>
-                        <option>Please Select</option>
-                        <option>Indian</option>
-                        <option>Foreigner</option>
-                    </select></td>
-            </tr>
-            <tr>
-                <td><label>Applicant's Full Name: </label></td>
-                <td><input type="text" placeholder="Enter Your Full Name" required></td>
-            </tr>
-            <tr>
-                <td><label>User Name: </label></td>
-                <td><input type="text" placeholder="Enter Your User Name" required></td>
-            </tr>
-            <tr>
-                <td><label>Password: </label></td>
-                <td><input type="password" placeholder="Enter Your Password" required></td>
-            </tr>
-            <tr>
-                <td><label>Confirm Password: </label></td>
-                <td><input type="password" placeholder="Confirm Your Password" required></td>
-            </tr>
-            <tr>
-                <td><label>Password Hint Question: </label></td>
-                <td><select>
-                        <option>Please Select</option>
-                    </select></td>
-            </tr>
-            <tr>
-                <td><label>Password Hint Answer: </label></td>
-                <td><input type="password" placeholder="Enter Password Hint Answer" required></td>
-            </tr>
-            <tr>
-                <td><label>Moblie Number: </label></td>
-                <td><input type="tel" placeholder="Enter Your Mobile Number" required></td>
-            </tr>
-            <tr>
-                <td><label>Email Id: </label></td>
-                <td><input type="email" placeholder="Enter Your Email Id" required></td>
-            </tr>
-            <tr>
-                <td><label>Address: </label></td>
-                <td><input type="textarea" placeholder="Enter Your Address" required></td>
-            </tr>
-            <tr>
-                <td><label>Contact US</label></td>
-                <td><button href="emailto:26someone@gmail.com">Click here</button></td>
-            </tr>
-            <tr>
-                <td align="right"><input type="submit" value="Submit"></td>
-                <td align="left"><input type="reset" value="Reset"></td>
-            </tr>
-        </table>
+        <label for="name">Name :</label>
+        <input type="text" id="name" name="name" placeholder="Enter
+your name" required>
+        <label for="password">Password :</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <label for="confirm_password">Confirm Password :</label>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password" required>
+        <label for="contact_number">Contact Number :</label>
+        <input type="tel" id="contact_number" name="contact_number" pattern="[0-9]{10}" placeholder="Enter a number"
+            required>
+        <label for="range">Skill Range :</label>
+        <input type="range" id="range" name="range" min="0" max="10" required>
+        <label for="email">Email :</label>
+
+        Computer Multimedia & Animation IV SEMESTER
+
+        14
+        <input type="email" id="email" name="email" placeholder="Enter
+your email" required>
+        <label for="url">Profile URL :</label>
+        <input type="url" id="url" name="url" placeholder="Enter your
+URL" required>
+        <label for="file">Resume :</label>
+        <input type="file" id="file" name="file" required>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <script>
+            const passwordInput = document.getElementById('password');
+            const confirmPasswordInput =
+                document.getElementById('confirm_password');
+            confirmPasswordInput.addEventListener('input', function () {
+                if (confirmPasswordInput.value !== passwordInput.value) {
+                    confirmPasswordInput.setCustomValidity('Passwords do notmatch');
+                } else {
+                    confirmPasswordInput.setCustomValidity('');
+                }
+            });
+        </script>
     </form>
 </body>
 
